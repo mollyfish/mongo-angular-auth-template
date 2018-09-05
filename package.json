@@ -1,0 +1,40 @@
+{
+  "name": "angular-auth-template",
+  "version": "0.1.0",
+  "description": "auth template using eat and bcrypt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TriviApp"
+  },
+  "author": "<kent.molly@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TriviApp"
+  },
+  "homepage": " ",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-base64": "^2.0.5",
+    "angular-cookies": "^1.4.7",
+    "angular-route": "^1.4.7",
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.14.1",
+    "eat": "^0.2.1",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "lodash": "^4.17.10",
+    "lodash.sample": "^4.2.1",
+    "mongoose": "^5.2.13",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "webpack-stream": "^2.1.1"
+  }
+}

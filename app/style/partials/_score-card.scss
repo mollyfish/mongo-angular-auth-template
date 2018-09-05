@@ -1,0 +1,44 @@
+.score-card {
+  position: relative;
+  h2 {
+    border-bottom: 1px solid rgba($border-color-theme, 0.5);  
+  }
+  p {
+    text-align: center;
+    line-height: 1.2;
+    margin: 0.5em 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgba($border-color-theme, 0.5);
+  }
+  ul {
+    text-align: center;
+    li {
+      margin: 0.5em;
+    }
+    li:nth-child(odd).correct {
+      @include set-font($text-color-correct, $main-font-regular, $font-size-regular, "auto");
+    }
+    li:nth-child(odd).incorrect {
+      @include set-font($text-color-wrong, $main-font-regular, $font-size-regular, "auto");
+    }
+    li:nth-child(even) {
+      @include set-font($text-color-dark, $main-font-light-italic, $font-size-regular, "auto");
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid rgba($border-color-theme, 0.5);
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+  .question {
+    @include set-font($text-color-theme, $main-font-bold, $font-size-regular, "auto");
+  }
+  .stars {
+    text-align: center;
+  }
+  .score {
+    @include set-font($text-color-dark, $main-font-bold, $font-size-regular, uppercase);
+    margin-top: -1.25em;
+    padding-bottom: 1em;
+  }
+}

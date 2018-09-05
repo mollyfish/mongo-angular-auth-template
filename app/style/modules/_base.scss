@@ -1,0 +1,12 @@
+html {
+  background-color: $background-color-dark;
+  height: 100%;
+}
+body {
+  font-family: $main-font-regular;
+  height: 100%;
+}
+main {
+  min-height: 100%;
+  position: relative;
+}

@@ -1,0 +1,32 @@
+.q-card {
+  position: relative;
+  .answers {
+    border-top: 1px solid rgba($border-color-dark, 0.5);
+    padding-top: 1em;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .countdown {
+    display: inline-block;
+    height: 1.5em;
+    width: 100%;
+    background-color: $background-color-theme;
+  }
+  &.right {
+    background-color: $background-color-correct;
+    border-color: $border-color-correct;
+  }
+  // upon wrong answer
+  &.wrong {
+    background-color: $background-color-wrong;
+    border-color: $border-color-wrong;
+  }
+  // upon timeout
+  .wrong {
+    background-color: $background-color-wrong;
+    border-color: $border-color-wrong;
+  }
+  .hidden {
+    visibility: hidden;
+  }
+}

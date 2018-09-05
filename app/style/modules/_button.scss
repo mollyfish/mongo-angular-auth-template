@@ -1,0 +1,51 @@
+//syntax: button 
+// (text color, 
+  // background color,
+  // border color optional, 
+  // font optional,
+  // font size optional, 
+  // hover text color optional,
+  // hover background color optional,
+  // uppercase optional (any value at all makes it uppercase) )
+
+@mixin button($text-color, $background-color, $border-color: $border-color-med, $font: $main-font-regular, $font-size: $font-size-regular, $hover-text: $background-color, $hover-background: $text-color, $uppercase: "auto") {
+
+  @include set-font ($text-color, $font, $font-size, $uppercase);
+  text-align: center;
+  width: 100%;
+  padding: 1em;
+  border: 1px solid $border-color;
+  border-radius: 0.5em;
+  background-color: $background-color;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+          transition: color 0.3s, background-color 0.3s;
+    outline: none;
+  &:hover {
+    color: $hover-text;
+    background-color: $hover-background;
+  }
+  &:active {
+    border: 1px solid $text-color;
+  }
+}
+
+%navigate-away-button {
+  @include button($text-color-dark, $background-color-light, $border-color-med, $main-font-light-italic, $font-size-regular, $background-color-light, $text-color-dark);
+  display: inline-block;
+  margin: 0.25em auto;
+  padding: 0.5em;
+  width: 25%;
+  &:focus {
+    -webkit-box-shadow: 1px 1px 10px 6px $background-color-theme;
+    -moz-box-shadow: 1px 1px 10px 6px $background-color-theme;
+      box-shadow: 1px 1px 10px 6px $background-color-theme;
+  }
+}
+
+%navigate-forward-button-uppercase {
+  @include button($text-color-dark, $background-color-theme, $border-color-med, $main-font-bold, $font-size-regular, $background-color-theme, $text-color-dark, uppercase);
+}
+
+%navigate-forward-button-lowercase {
+  @include button($text-color-dark, $background-color-theme, $border-color-med, $main-font-bold, $font-size-regular, $background-color-theme, $text-color-dark);
+}
