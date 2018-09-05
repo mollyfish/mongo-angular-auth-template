@@ -27,7 +27,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "lodash": "^4.17.10",
     "lodash.sample": "^4.2.1",
-    "mongoose": "^5.2.13",
+    "mongoose": "^4.1.11",
     "passport": "^0.4.0",
     "passport-http": "^0.3.0",
     "passport-http-bearer": "^1.0.1",

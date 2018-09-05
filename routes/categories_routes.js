@@ -13,8 +13,11 @@ categoryRouter.use(passport.initialize());
 
 categoryRouter.get('/categories/:category', bearerAuth.bearerAuthentication, function (req, res) {
   Category.findOne({category: req.params.category}, function (err, data) {
-    if (err) return (err, res);
-    console.log('req.params', req.params);
+    if (err) {
+      console.log("error!");
+      return (err, res);
+    }
+    console.log('req.params', req.params.category);
     console.log('data pre sample', data.questions);
     var questions = _.sample(data.questions, 5);
     console.log('questions', questions);
