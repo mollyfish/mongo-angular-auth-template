@@ -12,6 +12,7 @@ var categoryRouter = module.exports = exports = express.Router();
 categoryRouter.use(passport.initialize());
 
 categoryRouter.get('/categories/:category', bearerAuth.bearerAuthentication, function (req, res) {
+  console.log(Category.find({}));
   Category.findOne({category: req.params.category}, function (err, data) {
     if (err) {
       console.log("error!");
@@ -19,7 +20,7 @@ categoryRouter.get('/categories/:category', bearerAuth.bearerAuthentication, fun
     }
     console.log('req.params', req.params.category);
     console.log('data pre sample', data.questions);
-    var questions = _.sample(data.questions, 5);
+    var questions = data.questions;
     console.log('questions', questions);
     res.json({msg: questions, category: req.params.category});
   });
